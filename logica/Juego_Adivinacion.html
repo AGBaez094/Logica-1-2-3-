@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PROGRAMA JUEGO DE ADIVINACION</title>
+  </head>
+  <body>
+    <h1>JUEGO DE ADIVINACION</h1>
+
+            <script>
+              //funciones declaradas al principio del codigo, lleva parentesis (parametros) y llaves {instrucciones}
+              function saltarLinea(){
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+              };
+
+              //funcion que imprime la frase que sea, eso a traves de una variable llamada frase
+              function imprimir(frase){
+                document.write(frase);
+                saltarLinea(); //OJO: una funcion SI puede llamar a otra funcion para ahorrar trabajo!
+              };
+
+              //Math.random es una funcion que  devuelve un valor aleatorio entre 0 y 1
+              //para que devuelva valores de 0 a 10 se debe multiplicar por 10!!!!
+              //Math.round para convierte a numeros enteros!
+              var numeroPensado = Math.round(Math.random()*10);
+              var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y 10"));
+
+              if (numeroPensado == numeroLanzado) {
+                imprimir("usted acerto");
+              }
+
+              else {
+             //if (numeroPensado != numeroLanzado) {
+                imprimir("usted erro, el numero pensado era " + numeroPensado);
+              }
+
+            </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>EJERCICIO PRACTICO DE CICLOS</title>
+  </head>
+  <body>
+    <h1>EJERCICIO PRACTICO DE CICLOS</h1>
+
+            <script>
+              //funciones declaradas al principio del codigo, lleva parentesis (parametros) y llaves {instrucciones}
+              function saltarLinea(){
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+              };
+
+              //funcion que imprime la frase que sea, eso a traves de una variable llamada frase
+              function imprimir(frase){
+                document.write(frase);
+                saltarLinea(); //OJO: una funcion SI puede llamar a otra funcion para ahorrar trabajo!
+              };
+
+
+              var num = 0;
+              var contador = 1;
+
+              while (num <= 98) {
+                num ++;
+                num ++;
+                imprimir("numero " + num);
+                contador ++;
+
+              }
+
+              imprimir("fin");
+
+            </script>
+
+
+  </body>
+</html>

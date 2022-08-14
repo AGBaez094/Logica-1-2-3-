@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PROGRAMA CALCULAR IMC</title>
+  </head>
+  <body>
+    <script>
+      //funciones declaradas al principio del codigo, lleva parentesis (parametros) y llaves {instrucciones}
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+      };
+
+      //funcion que imprime la frase que sea, eso a traves de una variable llamada frase
+      function imprimir(frase){
+        document.write(frase);
+        saltarLinea(); //OJO: una funcion SI puede llamar a otra funcion para ahorrar trabajo!
+      };
+
+
+      function calcularImc(peso,altura,nombre){
+
+        imc = peso / (altura*altura);
+        imprimir("el imc calculado de " + nombre + " es: " + imc);
+        //return(imc); // tiene que devolver el resultado de la operacion
+
+      };
+
+      //pesoChristian = 71;
+      //alturaChristian = 1.72;
+      //imcChristian = pesoChristian/(alturaChristian*alturaChristian);
+      calcularImc(71,1.72, "christian");
+      calcularImc(75,1.73,"felipe");
+
+
+
+
+      //forma larga (sin funcion )
+      //pesoFelipe = 75;
+      //alturaFelipe = 1.73;
+      //imcFelipe = pesoFelipe/(alturaFelipe*alturaFelipe);
+      //imprimir("el indice de masa corporal de Felipe es: " + imcFelipe);
+
+      //pesoFelipe = 75;
+      //alturaFelipe = 1.73;
+      //imcFelipe = calcularImc(pesoFelipe,alturaFelipe); //pasar parametros a la funcion
+      //imprimir("El IMC de Felipe es: " + imcFelipe);
+    </script>
+
+
+
+
+
+<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+
+
+
+    <h1> PARA CALCULAR PROMEDIO</h1>
+    <script>
+      //funciones declaradas al principio del codigo, lleva parentesis (parametros) y llaves {instrucciones}
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+      };
+
+      //funcion que imprime la frase que sea, eso a traves de una variable llamada frase
+      function imprimir(frase){
+        document.write(frase);
+        saltarLinea(); //OJO: una funcion SI puede llamar a otra funcion para ahorrar trabajo!
+      };
+
+
+      function calcularImc(peso1,altura1,nombre1,peso2,altura2,nombre2){
+
+        imc1 = peso1 / (altura1*altura1);
+        imc2 = peso2 / (altura2*altura2);
+
+        imprimir("el promedio del  imc calculado de " + nombre1 + " y " + nombre2 + " es: " + (imc1+imc2)/2);
+        //return(imc); // tiene que devolver el resultado de la operacion
+
+      };
+
+
+      calcularImc(71,1.72, "christian",75,1.73,"felipe");
+
+      calcularImc(60,1.70, "gabriela",55,1.65,"luisa");
+
+    </script>
+
+
+
+
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CLASE 4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+
+
+
+        <h1> PARA CALCULAR PROMEDIO (parte 2)</h1>
+        <script>
+          //funciones declaradas al principio del codigo, lleva parentesis (parametros) y llaves {instrucciones}
+          function saltarLinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+          };
+
+          //funcion que imprime la frase que sea, eso a traves de una variable llamada frase
+          function imprimir(frase){
+            document.write(frase);
+            saltarLinea(); //OJO: una funcion SI puede llamar a otra funcion para ahorrar trabajo!
+          };
+
+
+          function calcularImc(peso,altura){
+            //para la FORMA1 son todas las lineas comentadas a partir de la siguiente:
+            //imc = peso / (altura*altura);
+            //return imc;
+            //FORMA2
+            return peso / (altura*altura); //es para quienes no quieran declarar la
+            //formula en 2 lineas!!!!
+
+          };
+
+          //var imcChristian = calcularImc(71,1.72);
+          //var imcFelipe = calcularImc(75,1.73);
+          //var imcGabriela = calcularImc(65,1.68);
+          //var imcLuisa = calcularImc(55,1.60);
+
+          //imprimir("el promedio del  imc calculado de christian y felipe es:  " + (imcChristian+imcFelipe)/2);
+          // FORMA 2
+          imprimir("el promedio del  imc calculado de christian y felipe es:  " + (calcularImc(71,1.72)+calcularImc(75,1.73))/2);
+          //imprimir("el promedio del  imc calculado de gabriela y luisa es:  " + (imcGabriela+imcLuisa)/2);
+          //FORMA2
+          imprimir("el promedio del  imc calculado de gabriela y luisa es:  " + (calcularImc(65,1.68)+calcularImc(55,1.60))/2);
+
+
+        </script>
+
+
+        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CLASE 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+
+
+
+            <h1> PARA CALCULAR IMC y que la persona interactue</h1>
+            <script>
+              //funciones declaradas al principio del codigo, lleva parentesis (parametros) y llaves {instrucciones}
+              function saltarLinea(){
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+              };
+
+              //funcion que imprime la frase que sea, eso a traves de una variable llamada frase
+              function imprimir(frase){
+                document.write(frase);
+                saltarLinea(); //OJO: una funcion SI puede llamar a otra funcion para ahorrar trabajo!
+              };
+
+
+              function calcularImc(peso,altura){
+                //FORMA2
+                return peso / (altura*altura); //es para quienes no quieran declarar la
+                //formula en 2 lineas!!!!
+
+              };
+
+              nombre = prompt("informe su nombre");
+              pesoInformado = prompt(nombre + " informe su peso"); //prompt nos sirve para mostrar ventanas emergentes y que
+                                                        //el usuario pueda ingresar datos!!!
+              alturaInformado = prompt(nombre + " informe su altura");
+
+              imcCalculado = calcularImc(pesoInformado, alturaInformado);
+
+              // FORMA 2
+              imprimir(nombre + "," + " su imc calculado es:  " + imcCalculado);
+
+
+              if (imcCalculado < 18.5){
+                imprimir ("IMC abajo de lo recomendado");
+              }
+
+              if (imcCalculado >=18.5){
+                if (imcCalculado < 25) {
+                imprimir ("IMC esta dentro del intervalo normal");
+                }
+
+              }
+
+              if (imcCalculado >= 25){
+                if (imcCalculado < 30) {
+                imprimir ("IMC considerado como sobrepeso");
+                }
+
+              }
+
+              if (imcCalculado >= 30){
+                imprimir ("IMC considerado como obesidad");
+              }
+
+
+            </script>
+
+
+  </body>
+</html>

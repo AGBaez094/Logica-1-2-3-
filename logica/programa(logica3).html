@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!--Es para hacer un lienzo-->
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+     var pantalla = document.querySelector("canvas");//conectando el canvas a JS (se crea la variable pantalla)
+     var pincel = pantalla.getContext("2d");//2d ya que son 2 dimensiones
+     //para definir un color de toto el Canvas
+     pincel.fillStyle = "lightgray"; //propiedad
+     //para pintar con pincel, es decir llenar rectangulo de colores, funciona como plano cartesiano
+     pincel.fillRect(0,0,600,400); //funcion
+     //posicion (0,0) avanza 600 y 400 (largo, ancho de canvas)
+
+     //un color de una parte del canvas
+     pincel.fillStyle = "green"; //propiedad
+     pincel.fillRect(0,0,200,400); //funcion
+
+
+     //otro color de otra parte del canvas
+     pincel.fillStyle = "red"; //propiedad
+     pincel.fillRect(400,0,600,400); //funcion
+
+     //aqui hicimos un triangulo
+     pincel.fillStyle = "yellow"; //propiedad
+     pincel.beginPath(); //comienza un camino a traves del canvas
+     pincel.moveTo(300,200); // se mueve a 300,200
+     pincel.lineTo(200,400);//traza lineas
+     pincel.lineTo(400,400);//otra linea
+     pincel.fill();//rellena
+
+     //circulo!
+     pincel.fillStyle = "blue"; //propiedad
+     pincel.beginPath(); //comienza un camino a traves del canvas
+     pincel.arc(300,200,50,0,2*3.14); //para circunferencia(posicion,radio,angulo inicial, angulo final[2*3.4])
+     pincel.fill();//rellena
+
+    </script>
+
+  </body>
+</html>

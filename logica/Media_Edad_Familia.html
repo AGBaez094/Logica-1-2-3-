@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CALCULAR LA MEDIA DE LAS EDADES DE UNA FAMILIA</title>
+  </head>
+  <body>
+    <h1>CALCULAR LA MEDIA DE LAS EDADES DE UNA FAMILIA</h1>
+
+            <script>
+              //funciones declaradas al principio del codigo, lleva parentesis (parametros) y llaves {instrucciones}
+              function saltarLinea(){
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+              };
+
+              //funcion que imprime la frase que sea, eso a traves de una variable llamada frase
+              function imprimir(frase){
+                document.write(frase);
+                saltarLinea(); //OJO: una funcion SI puede llamar a otra funcion para ahorrar trabajo!
+              };
+
+
+            var numeroMiembros = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+            var contador = 1;
+            var totalEdades = 0;
+            //la inicializacion de variables NUNCA debe estar dentro de un While o for
+              while (contador <= numeroMiembros) {
+
+                edad = parseInt(prompt("ingrese la edad del familiar "));
+                totalEdades =totalEdades + edad;
+                contador ++;
+
+              }
+
+              mediaEdades = totalEdades/numeroMiembros;
+
+              imprimir("La media de las edades de la familia es " + mediaEdades);
+              imprimir("fin");
+
+
+
+            </script>
+
+
+  </body>
+</html>

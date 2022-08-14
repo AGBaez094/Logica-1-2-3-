@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio practico 1 (Logica2)</title>
+  </head>
+  <body>
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var edad = parseInt(prompt("¿Cuál es tu edad?"));
+        var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+        if ((edad >= 18) && (tieneLicencia == "S")){
+            imprimir("Puedes conducir");
+          }
+
+
+        else {
+          imprimir("No puedes conducir");
+        }
+
+    </script>
+  </body>
+</html>

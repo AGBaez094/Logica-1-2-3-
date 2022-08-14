@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PROGRAMA JUEGO DE ADIVINACION</title>
+  </head>
+  <body>
+    <h1>JUEGO DE ADIVINACION</h1>
+
+            <script>
+
+              function saltarLinea(){
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+              };
+
+
+              function imprimir(frase){
+                document.write(frase);
+                saltarLinea();
+              };
+
+              function sorteo(n){
+                return Math.round(Math.random()*10);
+              }
+
+
+              var numeroPensado = sorteo();
+              var numeroLanzado = parseInt(prompt("Ingrese un numero entero positivo"));
+
+              if (numeroPensado == numeroLanzado) {
+                imprimir("usted acerto");
+              }
+
+              else {
+
+                if (numeroPensado < numeroLanzado) {
+                imprimir("usted erro, el numero que envio era menor que el numero Lanzado");
+              }
+              else {
+                if (numeroPensado > numeroLanzado) {
+                imprimir("usted erro, el numero que envio era mayor que el numero Lanzado");
+              }
+              }
+              }
+
+            </script>
+
+
+  </body>
+</html>

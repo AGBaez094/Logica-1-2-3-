@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+  </head>
+  <body>
+    <h1>LOGIN</h1>
+
+    <script>
+
+    function saltarLinea(){
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+    };
+
+    //funcion que imprime la frase que sea, eso a traves de una variable llamada frase
+    function imprimir(frase){
+      document.write(frase);
+      saltarLinea(); //OJO: una funcion SI puede llamar a otra funcion para ahorrar trabajo!
+    };
+
+    var contador = 1;
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+    while (contador <3){
+    if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+        alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        break;
+    } else {
+        alert("inicio de sesión inválido. Favor intente de nuevo");
+        contrasenhaIngresada= prompt("Ingrese su contraseña");
+
+    }
+
+    contador ++;
+  }
+</script>
+
+
+  </body>
+</html>
